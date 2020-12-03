@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.es.dao.RenterInfoDao">
+  <resultMap id="BaseResultMap" type="com.es.bean.RenterInfoModel">
+    <id column="id_" jdbcType="INTEGER" property="id" />
+    <result column="renter_type" jdbcType="INTEGER" property="renterType" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="full_name" jdbcType="VARCHAR" property="fullName" />
+    <result column="gender" jdbcType="INTEGER" property="gender" />
+    <result column="birthdate" jdbcType="TIMESTAMP" property="birthdate" />
+    <result column="head_big" jdbcType="VARCHAR" property="headBig" />
+    <result column="head_small" jdbcType="VARCHAR" property="headSmall" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="id_card_img_head" jdbcType="VARCHAR" property="idCardImgHead" />
+    <result column="id_card_img_back" jdbcType="VARCHAR" property="idCardImgBack" />
+    <result column="black_state" jdbcType="INTEGER" property="blackState" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="audit_state" jdbcType="INTEGER" property="auditState" />
+    <result column="audit_apply_time" jdbcType="TIMESTAMP" property="auditApplyTime" />
+    <result column="audit_time" jdbcType="TIMESTAMP" property="auditTime" />
+    <result column="audit_opinion" jdbcType="VARCHAR" property="auditOpinion" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="lock_state" jdbcType="INTEGER" property="lockState" />
+    <result column="del_state" jdbcType="INTEGER" property="delState" />
+    <result column="last_login_city" jdbcType="VARCHAR" property="lastLoginCity" />
+    <result column="last_logon_time" jdbcType="TIMESTAMP" property="lastLogonTime" />
+    <result column="last_logon_lng" jdbcType="DOUBLE" property="lastLogonLng" />
+    <result column="last_logon_lat" jdbcType="DOUBLE" property="lastLogonLat" />
+    <result column="register_city" jdbcType="VARCHAR" property="registerCity" />
+    <result column="city_name" jdbcType="VARCHAR" property="cityName" />
+    <result column="driver_inviter_id" jdbcType="INTEGER" property="driverInviterId" />
+    <result column="inviter_id" jdbcType="INTEGER" property="inviterId" />
+    <result column="acc_balance" jdbcType="INTEGER" property="accBalance" />
+    <result column="home_lng" jdbcType="DOUBLE" property="homeLng" />
+    <result column="home_lat" jdbcType="DOUBLE" property="homeLat" />
+    <result column="home_location" jdbcType="VARCHAR" property="homeLocation" />
+    <result column="company_lng" jdbcType="DOUBLE" property="companyLng" />
+    <result column="company_lat" jdbcType="DOUBLE" property="companyLat" />
+    <result column="company_location" jdbcType="VARCHAR" property="companyLocation" />
+    <result column="renter_score" jdbcType="FLOAT" property="renterScore" />
+    <result column="star" jdbcType="FLOAT" property="star" />
+    <result column="appraise_order_num" jdbcType="INTEGER" property="appraiseOrderNum" />
+    <result column="unfinished" jdbcType="VARCHAR" property="unfinished" />
+    <result column="cancel_count" jdbcType="INTEGER" property="cancelCount" />
+    <result column="join_black_time" jdbcType="TIMESTAMP" property="joinBlackTime" />
+    <result column="exit_black_time" jdbcType="TIMESTAMP" property="exitBlackTime" />
+    <result column="renter_source" jdbcType="VARCHAR" property="renterSource" />
+    <result column="audit_flag" jdbcType="INTEGER" property="auditFlag" />
+    <result column="drive_lic_img" jdbcType="VARCHAR" property="driveLicImg" />
+    <result column="drive_lic_img_copy" jdbcType="VARCHAR" property="driveLicImgCopy" />
+    <result column="first_issue_date" jdbcType="TIMESTAMP" property="firstIssueDate" />
+    <result column="foregift_amount" jdbcType="INTEGER" property="foregiftAmount" />
+    <result column="is_notice" jdbcType="INTEGER" property="isNotice" />
+    <result column="drive_licence_num" jdbcType="VARCHAR" property="driveLicenceNum" />
+    <result column="file_number" jdbcType="VARCHAR" property="fileNumber" />
+    <result column="drive_car_type" jdbcType="VARCHAR" property="driveCarType" />
+    <result column="field1" jdbcType="VARCHAR" property="field1" />
+    <result column="field2" jdbcType="VARCHAR" property="field2" />
+    <result column="field3" jdbcType="VARCHAR" property="field3" />
+    <result column="field4" jdbcType="VARCHAR" property="field4" />
+    <result column="field5" jdbcType="VARCHAR" property="field5" />
+    <result column="is_invite" jdbcType="TINYINT" property="isInvite" />
+    <result column="unfinished_delay" jdbcType="VARCHAR" property="unfinishedDelay" />
+    <result column="renter_risk" jdbcType="INTEGER" property="renterRisk" />
+    <result column="renter_risk_score" jdbcType="INTEGER" property="renterRiskScore" />
+    <result column="risk_opt_type" jdbcType="INTEGER" property="riskOptType" />
+    <result column="risk_update_time" jdbcType="TIMESTAMP" property="riskUpdateTime" />
+    <result column="auth_state" jdbcType="INTEGER" property="authState" />
+    <result column="industry_id" jdbcType="VARCHAR" property="industryId" />
+    <result column="industry_name" jdbcType="VARCHAR" property="industryName" />
+    <result column="occupation_name" jdbcType="VARCHAR" property="occupationName" />
+    <result column="renter_company" jdbcType="VARCHAR" property="renterCompany" />
+    <result column="is_ad_source" jdbcType="INTEGER" property="isAdSource" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id_, renter_type, mobile, pwd, nick_name, full_name, gender, birthdate, head_big,
+    head_small, id_card, id_card_img_head, id_card_img_back, black_state, remark, audit_state,
+    audit_apply_time, audit_time, audit_opinion, create_time, update_time, lock_state,
+    del_state, last_login_city, last_logon_time, last_logon_lng, last_logon_lat, register_city,
+    city_name, driver_inviter_id, inviter_id, acc_balance, home_lng, home_lat, home_location,
+    company_lng, company_lat, company_location, renter_score, star, appraise_order_num,
+    unfinished, cancel_count, join_black_time, exit_black_time, renter_source, audit_flag,
+    drive_lic_img, drive_lic_img_copy, first_issue_date, foregift_amount, is_notice,
+    drive_licence_num, file_number, drive_car_type, field1, field2, field3, field4, field5,
+    is_invite, unfinished_delay, renter_risk, renter_risk_score, risk_opt_type, risk_update_time,
+    auth_state, industry_id, industry_name, occupation_name, renter_company, is_ad_source
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from renter_info
+    where id_ = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from renter_info
+    where id_ = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id_" keyProperty="id" parameterType="com.es.bean.RenterInfoModel" useGeneratedKeys="true">
+    insert into renter_info (renter_type, mobile, pwd,
+      nick_name, full_name, gender,
+      birthdate, head_big, head_small,
+      id_card, id_card_img_head, id_card_img_back,
+      black_state, remark, audit_state,
+      audit_apply_time, audit_time, audit_opinion,
+      create_time, update_time, lock_state,
+      del_state, last_login_city, last_logon_time,
+      last_logon_lng, last_logon_lat, register_city,
+      city_name, driver_inviter_id, inviter_id,
+      acc_balance, home_lng, home_lat,
+      home_location, company_lng, company_lat,
+      company_location, renter_score, star,
+      appraise_order_num, unfinished, cancel_count,
+      join_black_time, exit_black_time, renter_source,
+      audit_flag, drive_lic_img, drive_lic_img_copy,
+      first_issue_date, foregift_amount, is_notice,
+      drive_licence_num, file_number, drive_car_type,
+      field1, field2, field3,
+      field4, field5, is_invite,
+      unfinished_delay, renter_risk, renter_risk_score,
+      risk_opt_type, risk_update_time, auth_state,
+      industry_id, industry_name, occupation_name,
+      renter_company, is_ad_source)
+    values (#{renterType,jdbcType=INTEGER}, #{mobile,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR},
+      #{nickName,jdbcType=VARCHAR}, #{fullName,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER},
+      #{birthdate,jdbcType=TIMESTAMP}, #{headBig,jdbcType=VARCHAR}, #{headSmall,jdbcType=VARCHAR},
+      #{idCard,jdbcType=VARCHAR}, #{idCardImgHead,jdbcType=VARCHAR}, #{idCardImgBack,jdbcType=VARCHAR},
+      #{blackState,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, #{auditState,jdbcType=INTEGER},
+      #{auditApplyTime,jdbcType=TIMESTAMP}, #{auditTime,jdbcType=TIMESTAMP}, #{auditOpinion,jdbcType=VARCHAR},
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{lockState,jdbcType=INTEGER},
+      #{delState,jdbcType=INTEGER}, #{lastLoginCity,jdbcType=VARCHAR}, #{lastLogonTime,jdbcType=TIMESTAMP},
+      #{lastLogonLng,jdbcType=DOUBLE}, #{lastLogonLat,jdbcType=DOUBLE}, #{registerCity,jdbcType=VARCHAR},
+      #{cityName,jdbcType=VARCHAR}, #{driverInviterId,jdbcType=INTEGER}, #{inviterId,jdbcType=INTEGER},
+      #{accBalance,jdbcType=INTEGER}, #{homeLng,jdbcType=DOUBLE}, #{homeLat,jdbcType=DOUBLE},
+      #{homeLocation,jdbcType=VARCHAR}, #{companyLng,jdbcType=DOUBLE}, #{companyLat,jdbcType=DOUBLE},
+      #{companyLocation,jdbcType=VARCHAR}, #{renterScore,jdbcType=FLOAT}, #{star,jdbcType=FLOAT},
+      #{appraiseOrderNum,jdbcType=INTEGER}, #{unfinished,jdbcType=VARCHAR}, #{cancelCount,jdbcType=INTEGER},
+      #{joinBlackTime,jdbcType=TIMESTAMP}, #{exitBlackTime,jdbcType=TIMESTAMP}, #{renterSource,jdbcType=VARCHAR},
+      #{auditFlag,jdbcType=INTEGER}, #{driveLicImg,jdbcType=VARCHAR}, #{driveLicImgCopy,jdbcType=VARCHAR},
+      #{firstIssueDate,jdbcType=TIMESTAMP}, #{foregiftAmount,jdbcType=INTEGER}, #{isNotice,jdbcType=INTEGER},
+      #{driveLicenceNum,jdbcType=VARCHAR}, #{fileNumber,jdbcType=VARCHAR}, #{driveCarType,jdbcType=VARCHAR},
+      #{field1,jdbcType=VARCHAR}, #{field2,jdbcType=VARCHAR}, #{field3,jdbcType=VARCHAR},
+      #{field4,jdbcType=VARCHAR}, #{field5,jdbcType=VARCHAR}, #{isInvite,jdbcType=TINYINT},
+      #{unfinishedDelay,jdbcType=VARCHAR}, #{renterRisk,jdbcType=INTEGER}, #{renterRiskScore,jdbcType=INTEGER},
+      #{riskOptType,jdbcType=INTEGER}, #{riskUpdateTime,jdbcType=TIMESTAMP}, #{authState,jdbcType=INTEGER},
+      #{industryId,jdbcType=VARCHAR}, #{industryName,jdbcType=VARCHAR}, #{occupationName,jdbcType=VARCHAR},
+      #{renterCompany,jdbcType=VARCHAR}, #{isAdSource,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="id_" keyProperty="id" parameterType="com.es.bean.RenterInfoModel" useGeneratedKeys="true">
+    insert into renter_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="renterType != null">
+        renter_type,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="pwd != null">
+        pwd,
+      </if>
+      <if test="nickName != null">
+        nick_name,
+      </if>
+      <if test="fullName != null">
+        full_name,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="birthdate != null">
+        birthdate,
+      </if>
+      <if test="headBig != null">
+        head_big,
+      </if>
+      <if test="headSmall != null">
+        head_small,
+      </if>
+      <if test="idCard != null">
+        id_card,
+      </if>
+      <if test="idCardImgHead != null">
+        id_card_img_head,
+      </if>
+      <if test="idCardImgBack != null">
+        id_card_img_back,
+      </if>
+      <if test="blackState != null">
+        black_state,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="auditState != null">
+        audit_state,
+      </if>
+      <if test="auditApplyTime != null">
+        audit_apply_time,
+      </if>
+      <if test="auditTime != null">
+        audit_time,
+      </if>
+      <if test="auditOpinion != null">
+        audit_opinion,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="lockState != null">
+        lock_state,
+      </if>
+      <if test="delState != null">
+        del_state,
+      </if>
+      <if test="lastLoginCity != null">
+        last_login_city,
+      </if>
+      <if test="lastLogonTime != null">
+        last_logon_time,
+      </if>
+      <if test="lastLogonLng != null">
+        last_logon_lng,
+      </if>
+      <if test="lastLogonLat != null">
+        last_logon_lat,
+      </if>
+      <if test="registerCity != null">
+        register_city,
+      </if>
+      <if test="cityName != null">
+        city_name,
+      </if>
+      <if test="driverInviterId != null">
+        driver_inviter_id,
+      </if>
+      <if test="inviterId != null">
+        inviter_id,
+      </if>
+      <if test="accBalance != null">
+        acc_balance,
+      </if>
+      <if test="homeLng != null">
+        home_lng,
+      </if>
+      <if test="homeLat != null">
+        home_lat,
+      </if>
+      <if test="homeLocation != null">
+        home_location,
+      </if>
+      <if test="companyLng != null">
+        company_lng,
+      </if>
+      <if test="companyLat != null">
+        company_lat,
+      </if>
+      <if test="companyLocation != null">
+        company_location,
+      </if>
+      <if test="renterScore != null">
+        renter_score,
+      </if>
+      <if test="star != null">
+        star,
+      </if>
+      <if test="appraiseOrderNum != null">
+        appraise_order_num,
+      </if>
+      <if test="unfinished != null">
+        unfinished,
+      </if>
+      <if test="cancelCount != null">
+        cancel_count,
+      </if>
+      <if test="joinBlackTime != null">
+        join_black_time,
+      </if>
+      <if test="exitBlackTime != null">
+        exit_black_time,
+      </if>
+      <if test="renterSource != null">
+        renter_source,
+      </if>
+      <if test="auditFlag != null">
+        audit_flag,
+      </if>
+      <if test="driveLicImg != null">
+        drive_lic_img,
+      </if>
+      <if test="driveLicImgCopy != null">
+        drive_lic_img_copy,
+      </if>
+      <if test="firstIssueDate != null">
+        first_issue_date,
+      </if>
+      <if test="foregiftAmount != null">
+        foregift_amount,
+      </if>
+      <if test="isNotice != null">
+        is_notice,
+      </if>
+      <if test="driveLicenceNum != null">
+        drive_licence_num,
+      </if>
+      <if test="fileNumber != null">
+        file_number,
+      </if>
+      <if test="driveCarType != null">
+        drive_car_type,
+      </if>
+      <if test="field1 != null">
+        field1,
+      </if>
+      <if test="field2 != null">
+        field2,
+      </if>
+      <if test="field3 != null">
+        field3,
+      </if>
+      <if test="field4 != null">
+        field4,
+      </if>
+      <if test="field5 != null">
+        field5,
+      </if>
+      <if test="isInvite != null">
+        is_invite,
+      </if>
+      <if test="unfinishedDelay != null">
+        unfinished_delay,
+      </if>
+      <if test="renterRisk != null">
+        renter_risk,
+      </if>
+      <if test="renterRiskScore != null">
+        renter_risk_score,
+      </if>
+      <if test="riskOptType != null">
+        risk_opt_type,
+      </if>
+      <if test="riskUpdateTime != null">
+        risk_update_time,
+      </if>
+      <if test="authState != null">
+        auth_state,
+      </if>
+      <if test="industryId != null">
+        industry_id,
+      </if>
+      <if test="industryName != null">
+        industry_name,
+      </if>
+      <if test="occupationName != null">
+        occupation_name,
+      </if>
+      <if test="renterCompany != null">
+        renter_company,
+      </if>
+      <if test="isAdSource != null">
+        is_ad_source,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="renterType != null">
+        #{renterType,jdbcType=INTEGER},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null">
+        #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null">
+        #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="fullName != null">
+        #{fullName,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="birthdate != null">
+        #{birthdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="headBig != null">
+        #{headBig,jdbcType=VARCHAR},
+      </if>
+      <if test="headSmall != null">
+        #{headSmall,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null">
+        #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardImgHead != null">
+        #{idCardImgHead,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardImgBack != null">
+        #{idCardImgBack,jdbcType=VARCHAR},
+      </if>
+      <if test="blackState != null">
+        #{blackState,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="auditState != null">
+        #{auditState,jdbcType=INTEGER},
+      </if>
+      <if test="auditApplyTime != null">
+        #{auditApplyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditTime != null">
+        #{auditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditOpinion != null">
+        #{auditOpinion,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lockState != null">
+        #{lockState,jdbcType=INTEGER},
+      </if>
+      <if test="delState != null">
+        #{delState,jdbcType=INTEGER},
+      </if>
+      <if test="lastLoginCity != null">
+        #{lastLoginCity,jdbcType=VARCHAR},
+      </if>
+      <if test="lastLogonTime != null">
+        #{lastLogonTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLogonLng != null">
+        #{lastLogonLng,jdbcType=DOUBLE},
+      </if>
+      <if test="lastLogonLat != null">
+        #{lastLogonLat,jdbcType=DOUBLE},
+      </if>
+      <if test="registerCity != null">
+        #{registerCity,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null">
+        #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="driverInviterId != null">
+        #{driverInviterId,jdbcType=INTEGER},
+      </if>
+      <if test="inviterId != null">
+        #{inviterId,jdbcType=INTEGER},
+      </if>
+      <if test="accBalance != null">
+        #{accBalance,jdbcType=INTEGER},
+      </if>
+      <if test="homeLng != null">
+        #{homeLng,jdbcType=DOUBLE},
+      </if>
+      <if test="homeLat != null">
+        #{homeLat,jdbcType=DOUBLE},
+      </if>
+      <if test="homeLocation != null">
+        #{homeLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLng != null">
+        #{companyLng,jdbcType=DOUBLE},
+      </if>
+      <if test="companyLat != null">
+        #{companyLat,jdbcType=DOUBLE},
+      </if>
+      <if test="companyLocation != null">
+        #{companyLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="renterScore != null">
+        #{renterScore,jdbcType=FLOAT},
+      </if>
+      <if test="star != null">
+        #{star,jdbcType=FLOAT},
+      </if>
+      <if test="appraiseOrderNum != null">
+        #{appraiseOrderNum,jdbcType=INTEGER},
+      </if>
+      <if test="unfinished != null">
+        #{unfinished,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelCount != null">
+        #{cancelCount,jdbcType=INTEGER},
+      </if>
+      <if test="joinBlackTime != null">
+        #{joinBlackTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="exitBlackTime != null">
+        #{exitBlackTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="renterSource != null">
+        #{renterSource,jdbcType=VARCHAR},
+      </if>
+      <if test="auditFlag != null">
+        #{auditFlag,jdbcType=INTEGER},
+      </if>
+      <if test="driveLicImg != null">
+        #{driveLicImg,jdbcType=VARCHAR},
+      </if>
+      <if test="driveLicImgCopy != null">
+        #{driveLicImgCopy,jdbcType=VARCHAR},
+      </if>
+      <if test="firstIssueDate != null">
+        #{firstIssueDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="foregiftAmount != null">
+        #{foregiftAmount,jdbcType=INTEGER},
+      </if>
+      <if test="isNotice != null">
+        #{isNotice,jdbcType=INTEGER},
+      </if>
+      <if test="driveLicenceNum != null">
+        #{driveLicenceNum,jdbcType=VARCHAR},
+      </if>
+      <if test="fileNumber != null">
+        #{fileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="driveCarType != null">
+        #{driveCarType,jdbcType=VARCHAR},
+      </if>
+      <if test="field1 != null">
+        #{field1,jdbcType=VARCHAR},
+      </if>
+      <if test="field2 != null">
+        #{field2,jdbcType=VARCHAR},
+      </if>
+      <if test="field3 != null">
+        #{field3,jdbcType=VARCHAR},
+      </if>
+      <if test="field4 != null">
+        #{field4,jdbcType=VARCHAR},
+      </if>
+      <if test="field5 != null">
+        #{field5,jdbcType=VARCHAR},
+      </if>
+      <if test="isInvite != null">
+        #{isInvite,jdbcType=TINYINT},
+      </if>
+      <if test="unfinishedDelay != null">
+        #{unfinishedDelay,jdbcType=VARCHAR},
+      </if>
+      <if test="renterRisk != null">
+        #{renterRisk,jdbcType=INTEGER},
+      </if>
+      <if test="renterRiskScore != null">
+        #{renterRiskScore,jdbcType=INTEGER},
+      </if>
+      <if test="riskOptType != null">
+        #{riskOptType,jdbcType=INTEGER},
+      </if>
+      <if test="riskUpdateTime != null">
+        #{riskUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="authState != null">
+        #{authState,jdbcType=INTEGER},
+      </if>
+      <if test="industryId != null">
+        #{industryId,jdbcType=VARCHAR},
+      </if>
+      <if test="industryName != null">
+        #{industryName,jdbcType=VARCHAR},
+      </if>
+      <if test="occupationName != null">
+        #{occupationName,jdbcType=VARCHAR},
+      </if>
+      <if test="renterCompany != null">
+        #{renterCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="isAdSource != null">
+        #{isAdSource,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.es.bean.RenterInfoModel">
+    update renter_info
+    <set>
+      <if test="renterType != null">
+        renter_type = #{renterType,jdbcType=INTEGER},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="pwd != null">
+        pwd = #{pwd,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null">
+        nick_name = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="fullName != null">
+        full_name = #{fullName,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="birthdate != null">
+        birthdate = #{birthdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="headBig != null">
+        head_big = #{headBig,jdbcType=VARCHAR},
+      </if>
+      <if test="headSmall != null">
+        head_small = #{headSmall,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null">
+        id_card = #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardImgHead != null">
+        id_card_img_head = #{idCardImgHead,jdbcType=VARCHAR},
+      </if>
+      <if test="idCardImgBack != null">
+        id_card_img_back = #{idCardImgBack,jdbcType=VARCHAR},
+      </if>
+      <if test="blackState != null">
+        black_state = #{blackState,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="auditState != null">
+        audit_state = #{auditState,jdbcType=INTEGER},
+      </if>
+      <if test="auditApplyTime != null">
+        audit_apply_time = #{auditApplyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditTime != null">
+        audit_time = #{auditTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="auditOpinion != null">
+        audit_opinion = #{auditOpinion,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lockState != null">
+        lock_state = #{lockState,jdbcType=INTEGER},
+      </if>
+      <if test="delState != null">
+        del_state = #{delState,jdbcType=INTEGER},
+      </if>
+      <if test="lastLoginCity != null">
+        last_login_city = #{lastLoginCity,jdbcType=VARCHAR},
+      </if>
+      <if test="lastLogonTime != null">
+        last_logon_time = #{lastLogonTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLogonLng != null">
+        last_logon_lng = #{lastLogonLng,jdbcType=DOUBLE},
+      </if>
+      <if test="lastLogonLat != null">
+        last_logon_lat = #{lastLogonLat,jdbcType=DOUBLE},
+      </if>
+      <if test="registerCity != null">
+        register_city = #{registerCity,jdbcType=VARCHAR},
+      </if>
+      <if test="cityName != null">
+        city_name = #{cityName,jdbcType=VARCHAR},
+      </if>
+      <if test="driverInviterId != null">
+        driver_inviter_id = #{driverInviterId,jdbcType=INTEGER},
+      </if>
+      <if test="inviterId != null">
+        inviter_id = #{inviterId,jdbcType=INTEGER},
+      </if>
+      <if test="accBalance != null">
+        acc_balance = #{accBalance,jdbcType=INTEGER},
+      </if>
+      <if test="homeLng != null">
+        home_lng = #{homeLng,jdbcType=DOUBLE},
+      </if>
+      <if test="homeLat != null">
+        home_lat = #{homeLat,jdbcType=DOUBLE},
+      </if>
+      <if test="homeLocation != null">
+        home_location = #{homeLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLng != null">
+        company_lng = #{companyLng,jdbcType=DOUBLE},
+      </if>
+      <if test="companyLat != null">
+        company_lat = #{companyLat,jdbcType=DOUBLE},
+      </if>
+      <if test="companyLocation != null">
+        company_location = #{companyLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="renterScore != null">
+        renter_score = #{renterScore,jdbcType=FLOAT},
+      </if>
+      <if test="star != null">
+        star = #{star,jdbcType=FLOAT},
+      </if>
+      <if test="appraiseOrderNum != null">
+        appraise_order_num = #{appraiseOrderNum,jdbcType=INTEGER},
+      </if>
+      <if test="unfinished != null">
+        unfinished = #{unfinished,jdbcType=VARCHAR},
+      </if>
+      <if test="cancelCount != null">
+        cancel_count = #{cancelCount,jdbcType=INTEGER},
+      </if>
+      <if test="joinBlackTime != null">
+        join_black_time = #{joinBlackTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="exitBlackTime != null">
+        exit_black_time = #{exitBlackTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="renterSource != null">
+        renter_source = #{renterSource,jdbcType=VARCHAR},
+      </if>
+      <if test="auditFlag != null">
+        audit_flag = #{auditFlag,jdbcType=INTEGER},
+      </if>
+      <if test="driveLicImg != null">
+        drive_lic_img = #{driveLicImg,jdbcType=VARCHAR},
+      </if>
+      <if test="driveLicImgCopy != null">
+        drive_lic_img_copy = #{driveLicImgCopy,jdbcType=VARCHAR},
+      </if>
+      <if test="firstIssueDate != null">
+        first_issue_date = #{firstIssueDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="foregiftAmount != null">
+        foregift_amount = #{foregiftAmount,jdbcType=INTEGER},
+      </if>
+      <if test="isNotice != null">
+        is_notice = #{isNotice,jdbcType=INTEGER},
+      </if>
+      <if test="driveLicenceNum != null">
+        drive_licence_num = #{driveLicenceNum,jdbcType=VARCHAR},
+      </if>
+      <if test="fileNumber != null">
+        file_number = #{fileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="driveCarType != null">
+        drive_car_type = #{driveCarType,jdbcType=VARCHAR},
+      </if>
+      <if test="field1 != null">
+        field1 = #{field1,jdbcType=VARCHAR},
+      </if>
+      <if test="field2 != null">
+        field2 = #{field2,jdbcType=VARCHAR},
+      </if>
+      <if test="field3 != null">
+        field3 = #{field3,jdbcType=VARCHAR},
+      </if>
+      <if test="field4 != null">
+        field4 = #{field4,jdbcType=VARCHAR},
+      </if>
+      <if test="field5 != null">
+        field5 = #{field5,jdbcType=VARCHAR},
+      </if>
+      <if test="isInvite != null">
+        is_invite = #{isInvite,jdbcType=TINYINT},
+      </if>
+      <if test="unfinishedDelay != null">
+        unfinished_delay = #{unfinishedDelay,jdbcType=VARCHAR},
+      </if>
+      <if test="renterRisk != null">
+        renter_risk = #{renterRisk,jdbcType=INTEGER},
+      </if>
+      <if test="renterRiskScore != null">
+        renter_risk_score = #{renterRiskScore,jdbcType=INTEGER},
+      </if>
+      <if test="riskOptType != null">
+        risk_opt_type = #{riskOptType,jdbcType=INTEGER},
+      </if>
+      <if test="riskUpdateTime != null">
+        risk_update_time = #{riskUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="authState != null">
+        auth_state = #{authState,jdbcType=INTEGER},
+      </if>
+      <if test="industryId != null">
+        industry_id = #{industryId,jdbcType=VARCHAR},
+      </if>
+      <if test="industryName != null">
+        industry_name = #{industryName,jdbcType=VARCHAR},
+      </if>
+      <if test="occupationName != null">
+        occupation_name = #{occupationName,jdbcType=VARCHAR},
+      </if>
+      <if test="renterCompany != null">
+        renter_company = #{renterCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="isAdSource != null">
+        is_ad_source = #{isAdSource,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id_ = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.es.bean.RenterInfoModel">
+    update renter_info
+    set renter_type = #{renterType,jdbcType=INTEGER},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      pwd = #{pwd,jdbcType=VARCHAR},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      full_name = #{fullName,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=INTEGER},
+      birthdate = #{birthdate,jdbcType=TIMESTAMP},
+      head_big = #{headBig,jdbcType=VARCHAR},
+      head_small = #{headSmall,jdbcType=VARCHAR},
+      id_card = #{idCard,jdbcType=VARCHAR},
+      id_card_img_head = #{idCardImgHead,jdbcType=VARCHAR},
+      id_card_img_back = #{idCardImgBack,jdbcType=VARCHAR},
+      black_state = #{blackState,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      audit_state = #{auditState,jdbcType=INTEGER},
+      audit_apply_time = #{auditApplyTime,jdbcType=TIMESTAMP},
+      audit_time = #{auditTime,jdbcType=TIMESTAMP},
+      audit_opinion = #{auditOpinion,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      lock_state = #{lockState,jdbcType=INTEGER},
+      del_state = #{delState,jdbcType=INTEGER},
+      last_login_city = #{lastLoginCity,jdbcType=VARCHAR},
+      last_logon_time = #{lastLogonTime,jdbcType=TIMESTAMP},
+      last_logon_lng = #{lastLogonLng,jdbcType=DOUBLE},
+      last_logon_lat = #{lastLogonLat,jdbcType=DOUBLE},
+      register_city = #{registerCity,jdbcType=VARCHAR},
+      city_name = #{cityName,jdbcType=VARCHAR},
+      driver_inviter_id = #{driverInviterId,jdbcType=INTEGER},
+      inviter_id = #{inviterId,jdbcType=INTEGER},
+      acc_balance = #{accBalance,jdbcType=INTEGER},
+      home_lng = #{homeLng,jdbcType=DOUBLE},
+      home_lat = #{homeLat,jdbcType=DOUBLE},
+      home_location = #{homeLocation,jdbcType=VARCHAR},
+      company_lng = #{companyLng,jdbcType=DOUBLE},
+      company_lat = #{companyLat,jdbcType=DOUBLE},
+      company_location = #{companyLocation,jdbcType=VARCHAR},
+      renter_score = #{renterScore,jdbcType=FLOAT},
+      star = #{star,jdbcType=FLOAT},
+      appraise_order_num = #{appraiseOrderNum,jdbcType=INTEGER},
+      unfinished = #{unfinished,jdbcType=VARCHAR},
+      cancel_count = #{cancelCount,jdbcType=INTEGER},
+      join_black_time = #{joinBlackTime,jdbcType=TIMESTAMP},
+      exit_black_time = #{exitBlackTime,jdbcType=TIMESTAMP},
+      renter_source = #{renterSource,jdbcType=VARCHAR},
+      audit_flag = #{auditFlag,jdbcType=INTEGER},
+      drive_lic_img = #{driveLicImg,jdbcType=VARCHAR},
+      drive_lic_img_copy = #{driveLicImgCopy,jdbcType=VARCHAR},
+      first_issue_date = #{firstIssueDate,jdbcType=TIMESTAMP},
+      foregift_amount = #{foregiftAmount,jdbcType=INTEGER},
+      is_notice = #{isNotice,jdbcType=INTEGER},
+      drive_licence_num = #{driveLicenceNum,jdbcType=VARCHAR},
+      file_number = #{fileNumber,jdbcType=VARCHAR},
+      drive_car_type = #{driveCarType,jdbcType=VARCHAR},
+      field1 = #{field1,jdbcType=VARCHAR},
+      field2 = #{field2,jdbcType=VARCHAR},
+      field3 = #{field3,jdbcType=VARCHAR},
+      field4 = #{field4,jdbcType=VARCHAR},
+      field5 = #{field5,jdbcType=VARCHAR},
+      is_invite = #{isInvite,jdbcType=TINYINT},
+      unfinished_delay = #{unfinishedDelay,jdbcType=VARCHAR},
+      renter_risk = #{renterRisk,jdbcType=INTEGER},
+      renter_risk_score = #{renterRiskScore,jdbcType=INTEGER},
+      risk_opt_type = #{riskOptType,jdbcType=INTEGER},
+      risk_update_time = #{riskUpdateTime,jdbcType=TIMESTAMP},
+      auth_state = #{authState,jdbcType=INTEGER},
+      industry_id = #{industryId,jdbcType=VARCHAR},
+      industry_name = #{industryName,jdbcType=VARCHAR},
+      occupation_name = #{occupationName,jdbcType=VARCHAR},
+      renter_company = #{renterCompany,jdbcType=VARCHAR},
+      is_ad_source = #{isAdSource,jdbcType=INTEGER}
+    where id_ = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="query" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"></include>
+    from renter_info
+  </select>
+</mapper>

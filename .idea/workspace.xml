@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="920bdb24-e690-455d-9bcc-26f34758d0aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../LearningPowerManager" beforeDir="false" afterPath="$PROJECT_DIR$/../LearningPowerManager" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MaterialMS_web" beforeDir="false" afterPath="$PROJECT_DIR$/../MaterialMS_web" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WxJava" beforeDir="false" afterPath="$PROJECT_DIR$/../WxJava" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bank-check" beforeDir="false" afterPath="$PROJECT_DIR$/../bank-check" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../buildWorkFlow" beforeDir="false" afterPath="$PROJECT_DIR$/../buildWorkFlow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../joyful" beforeDir="false" afterPath="$PROJECT_DIR$/../joyful" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learn-power" beforeDir="false" afterPath="$PROJECT_DIR$/../learn-power" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mms" beforeDir="false" afterPath="$PROJECT_DIR$/../mms" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/es/EsApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/es/bean/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/es/config/EsConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/es/EsAppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pdftoword" beforeDir="false" afterPath="$PROJECT_DIR$/../pdftoword" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tosaas" beforeDir="false" afterPath="$PROJECT_DIR$/../tosaas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../una-saas-toturial" beforeDir="false" afterPath="$PROJECT_DIR$/../una-saas-toturial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wl-workflow" beforeDir="false" afterPath="$PROJECT_DIR$/../wl-workflow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workFlow" beforeDir="false" afterPath="$PROJECT_DIR$/../workFlow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workflow-vue" beforeDir="false" afterPath="$PROJECT_DIR$/../workflow-vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\java\tmp" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../soft/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\soft\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kPWtKnI61oVpPEjmNAM24qR5si" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.27586207" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dadysu.es.kafka" />
+      <recent name="com.dadysu.es.config" />
+      <recent name="com.dadysu.es.bean" />
+      <recent name="bean" />
+      <recent name="com.es" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\selfWorkSpace\mysql-kafka-es\KafkaToEs\src\main\java\com\dadysu\es" />
+      <recent name="D:\selfWorkSpace\mysql-kafka-es\MysqlBinlogToKafka\src\main\java\com\dadysu\es" />
+      <recent name="D:\selfWorkSpace\es-191720653\src\main\java\com\es\bean" />
+      <recent name="D:\selfWorkSpace\es-191720653\src\main\resources\mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.KafkaToEsApplication">
+    <configuration name="KafkaConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dadysu.es.kafka.KafkaConsumer" />
+      <module name="kafkatoes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dadysu.es.kafka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EsAppTest.testIndex" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="es" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.es.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.es" />
+      <option name="MAIN_CLASS_NAME" value="com.es.EsAppTest" />
+      <option name="METHOD_NAME" value="testIndex" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EsTest.importAllData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="es" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.es.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.es" />
+      <option name="MAIN_CLASS_NAME" value="com.es.EsTest" />
+      <option name="METHOD_NAME" value="importAllData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaToEsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="kafkatoes" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dadysu.es.KafkaToEsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MysqlBinlogToKafkaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="es" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dadysu.es.MysqlBinlogToKafkaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.EsAppTest.testIndex" />
+      <item itemvalue="JUnit.EsTest.importAllData" />
+      <item itemvalue="Spring Boot.MysqlBinlogToKafkaApplication" />
+      <item itemvalue="Spring Boot.KafkaToEsApplication" />
+      <item itemvalue="Application.KafkaConsumer" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.KafkaConsumer" />
+        <item itemvalue="JUnit.EsTest.importAllData" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="920bdb24-e690-455d-9bcc-26f34758d0aa" name="Default Changelist" comment="" />
+      <created>1605602919303</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605602919303</updated>
+      <workItem from="1605602956939" duration="4377000" />
+      <workItem from="1605665677131" duration="7801000" />
+      <workItem from="1606185328305" duration="3256000" />
+      <workItem from="1606358886725" duration="5646000" />
+      <workItem from="1606443279734" duration="14366000" />
+      <workItem from="1606701659253" duration="1051000" />
+      <workItem from="1606704219858" duration="63000" />
+      <workItem from="1606808954896" duration="311000" />
+      <workItem from="1606809317033" duration="22000" />
+      <workItem from="1606809346588" duration="1198000" />
+      <workItem from="1606876463750" duration="1782000" />
+      <workItem from="1606893879483" duration="183000" />
+      <workItem from="1606894068974" duration="6982000" />
+      <workItem from="1606903203378" duration="3410000" />
+      <workItem from="1606962107331" duration="19169000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="163" y="0" key="#Project_Structure" timestamp="1606987053827">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1606987053827" />
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606903067856">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1606903067856" />
+    <state x="488" y="68" key="#com.intellij.ide.util.MemberChooser" timestamp="1606988101377">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="68" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1606988101377" />
+    <state x="413" y="138" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1606388039392">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="138" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1606388039392" />
+    <state x="412" y="152" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606903066600">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="412" y="152" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1606903066600" />
+    <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606976950896">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="109" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606976950896" />
+    <state x="217" y="163" width="1048" height="549" key="#xdebugger.evaluate" timestamp="1606989525304">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="217" y="163" width="1048" height="549" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1606989525304" />
+    <state width="660" height="419" key="DebuggerActiveHint" timestamp="1606989560325">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="660" height="419" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1606989560325" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606894772580">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606894772580" />
+    <state width="1321" height="203" key="GridCell.Tab.0.bottom" timestamp="1606989801026">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606989801026" />
+    <state width="1321" height="203" key="GridCell.Tab.0.center" timestamp="1606989801025">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606989801025" />
+    <state width="1321" height="203" key="GridCell.Tab.0.left" timestamp="1606989801025">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606989801025" />
+    <state width="1321" height="203" key="GridCell.Tab.0.right" timestamp="1606989801025">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606989801025" />
+    <state width="1321" height="203" key="GridCell.Tab.1.bottom" timestamp="1606989800809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606989800809" />
+    <state width="1321" height="203" key="GridCell.Tab.1.center" timestamp="1606989800809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1606989800809" />
+    <state width="1321" height="203" key="GridCell.Tab.1.left" timestamp="1606989800809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1606989800809" />
+    <state width="1321" height="203" key="GridCell.Tab.1.right" timestamp="1606989800809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1606989800809" />
+    <state width="1321" height="203" key="GridCell.Tab.2.bottom" timestamp="1606989800809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606989800809" />
+    <state width="1321" height="203" key="GridCell.Tab.2.center" timestamp="1606989800809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1606989800809" />
+    <state width="1321" height="203" key="GridCell.Tab.2.left" timestamp="1606989800809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1606989800809" />
+    <state width="1321" height="203" key="GridCell.Tab.2.right" timestamp="1606989800809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1321" height="203" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1606989800809" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1606906709764">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606906709764" />
+    <state width="691" height="366" key="XDebugger.FullValuePopup" timestamp="1606988784541">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="691" height="366" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1606988784541" />
+    <state x="97" y="131" width="596" height="594" key="find.popup" timestamp="1606976960737">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="97" y="131" width="596" height="594" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1606976960737" />
+    <state x="107" y="47" key="new project wizard" timestamp="1606965607039">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="107" y="47" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1606965607039" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1606449280555">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606449280555" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606987706396">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606987706396" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/KafkaToEs/src/main/java/com/dadysu/es/kafka/KafkaConsumer.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

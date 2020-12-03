@@ -1,0 +1,16 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      retries: 10
+
+binlogtokafka:
+  serverId: 1
+  tableNames: es-test.renter_info
+  mysqlHost: 127.0.0.1
+  mysqlPort: 3306
+  mysqlUser: root
+  mysqlPassword: 123456
+  topic: mysql-to-es-topic
+  partitionNum: 1
+  relica: 1

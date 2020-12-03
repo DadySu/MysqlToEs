@@ -1,0 +1,32 @@
+
+
+
+spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers: localhost:9092
+      enable-auto-commit: false
+      max-poll-records: 1
+    listener:
+      ack-mode: manual
+
+  elasticsearch:
+    rest:
+      uris: 116.196.82.212:9200
+      username: elastic
+      password: iamno1123
+  datasource:
+    password: 123456
+    username: root
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/es-test?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true
+server:
+  port: 8881
+
+
+binlogtokafka:
+  tableNames: es-test.renter_info
+  topic: mysql-to-es-topic
+  groupId: mysqlToEsTopicGroup
