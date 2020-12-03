@@ -6,7 +6,7 @@ spring:
 
 binlogtokafka:
   serverId: 1
-  tableNames: es-test.renter_info
+  tableNames: es-test.binlog_test
   mysqlHost: 127.0.0.1
   mysqlPort: 3306
   mysqlUser: root

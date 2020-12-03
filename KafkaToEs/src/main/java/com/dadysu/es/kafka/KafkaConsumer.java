@@ -3,7 +3,7 @@ package com.dadysu.es.kafka;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.dadysu.es.bean.BinlogModel;
-import com.dadysu.es.bean.RenterInfoModel;
+import com.dadysu.es.bean.BinlogTestModel;
 import com.dadysu.es.config.BinlogListenerConfiguration;
 import com.dadysu.es.constant.KafkaConstant;
 import com.dadysu.es.constant.MethodConstant;
@@ -36,91 +36,85 @@ public class KafkaConsumer {
         BinlogModel binlogModel = JSONObject.parseObject(value.toString(), BinlogModel.class);
         log.info("binglog info binlogModel:{}", JSON.toJSONString(binlogModel));
 
-        RenterInfoModel renterInfoModel = binglogToModel(binlogModel);
-        modelToEs(renterInfoModel, binlogModel.getMethod());
+        BinlogTestModel binlogTestModel = binglogToModel(binlogModel);
+        modelToEs(binlogTestModel, binlogModel.getMethod());
         ack.acknowledge();
     }
 
-    private RenterInfoModel binglogToModel(BinlogModel binlogModel) {
+    private BinlogTestModel binglogToModel(BinlogModel binlogModel) {
         String tableName = binlogModel.getTableName();
         String method = binlogModel.getMethod();
         String row = Arrays.toString(binlogModel.getRow());
         Serializable[] array = binlogModel.getRow();
         if (configuration.getTableNames().equals(tableName)) {
-            RenterInfoModel renterInfoModel = new RenterInfoModel();
+            BinlogTestModel binlogTestModel = new BinlogTestModel();
 
             // id
-            renterInfoModel.setId(Integer.parseInt(array[0].toString()));
+            binlogTestModel.setId(Integer.parseInt(array[0].toString()));
             if (array[1] != null) {
-                renterInfoModel.setRenterType(Integer.parseInt(array[1].toString()));
+                binlogTestModel.setRenterType(Integer.parseInt(array[1].toString()));
             }
             if (array[2] != null) {
-                renterInfoModel.setMobile(array[2].toString());
+                binlogTestModel.setMobile(array[2].toString());
             }
             if (array[3] != null) {
-                renterInfoModel.setPwd(array[3].toString());
+                binlogTestModel.setPwd(array[3].toString());
             }
             if (array[4] != null) {
-                renterInfoModel.setNickName(array[4].toString());
+                binlogTestModel.setNickName(array[4].toString());
             }
             if (array[5] != null) {
-                renterInfoModel.setFullName(array[5].toString());
+                binlogTestModel.setFullName(array[5].toString());
             }
             if (array[6] != null) {
-                renterInfoModel.setGender(Integer.parseInt(array[6].toString()));
+                binlogTestModel.setGender(Integer.parseInt(array[6].toString()));
             }
             if (array[7] != null) {
                 //renterInfoModel.setBirthdate(DateUtil.parseDate(array[7].toString()));
             }
             if (array[8] != null) {
-                renterInfoModel.setHeadBig(array[8].toString());
+                binlogTestModel.setHeadBig(array[8].toString());
             }
             if (array[9] != null) {
-                renterInfoModel.setHeadSmall(array[9].toString());
+                binlogTestModel.setHeadSmall(array[9].toString());
             }
             if (array[10] != null) {
-                renterInfoModel.setIdCard(array[10].toString());
+                binlogTestModel.setIdCard(array[10].toString());
             }
             if (array[11] != null) {
-                renterInfoModel.setIdCardImgHead(array[11].toString());
+                binlogTestModel.setIdCardImgHead(array[11].toString());
             }
             if (array[12] != null) {
-                renterInfoModel.setIdCardImgBack(array[12].toString());
+                binlogTestModel.setIdCardImgBack(array[12].toString());
             }
             if (array[13] != null) {
-                renterInfoModel.setBlackState(Integer.parseInt(array[13].toString()));
+                binlogTestModel.setBlackState(Integer.parseInt(array[13].toString()));
             }
             if (array[14] != null) {
-                renterInfoModel.setRemark(array[14].toString());
+                binlogTestModel.setRemark(array[14].toString());
             }
             if (array[15] != null) {
-                renterInfoModel.setAuditState(Integer.parseInt(array[15].toString()));
+                binlogTestModel.setAuditState(Integer.parseInt(array[15].toString()));
             }
             if (array[16] != null) {
-                //renterInfoModel.setAuditApplyTime(DateUtil.parseDate(array[16].toString()));
-            }
-            if (array[17] != null) {
-                //renterInfoModel.setAuditTime(DateUtil.parseDate(array[17].toString()));
-            }
-            if (array[18] != null) {
-                renterInfoModel.setAuditOpinion(array[18].toString());
+                binlogTestModel.setAuditOpinion(array[18].toString());
             }
 
-            return renterInfoModel;
+            return binlogTestModel;
         }
 
         return null;
     }
 
 
-    private void modelToEs(RenterInfoModel renterInfoModel, String method) {
-        if (renterInfoModel == null) {
+    private void modelToEs(BinlogTestModel binlogTestModel, String method) {
+        if (binlogTestModel == null) {
             return;
         }
         if (MethodConstant.INSERT.equals(method) || MethodConstant.UPDATE.equals(method)) {
-            renterInfoRepository.save(renterInfoModel);
+            renterInfoRepository.save(binlogTestModel);
         } else if (MethodConstant.DELETE.equals(method)) {
-            renterInfoRepository.delete(renterInfoModel);
+            renterInfoRepository.delete(binlogTestModel);
         }
 
     }

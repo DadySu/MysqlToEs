@@ -1,6 +1,6 @@
 package com.dadysu.es.dao;
 
-import com.dadysu.es.bean.RenterInfoModel;
+import com.dadysu.es.bean.BinlogTestModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -9,15 +9,15 @@ import java.util.List;
 public interface RenterInfoDao {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(RenterInfoModel record);
+    int insert(BinlogTestModel record);
 
-    int insertSelective(RenterInfoModel record);
+    int insertSelective(BinlogTestModel record);
 
-    RenterInfoModel selectByPrimaryKey(Integer id);
+    BinlogTestModel selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(RenterInfoModel record);
+    int updateByPrimaryKeySelective(BinlogTestModel record);
 
-    int updateByPrimaryKey(RenterInfoModel record);
+    int updateByPrimaryKey(BinlogTestModel record);
 
-    List<RenterInfoModel> query();
+    List<BinlogTestModel> query();
 }
