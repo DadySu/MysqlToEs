@@ -27,6 +27,7 @@ public class BinlogListener implements ApplicationRunner {
 
     /**
      * 监听binlog指定表，写入kafka
+     *
      * @param args
      * @throws Exception
      */
@@ -67,7 +68,7 @@ public class BinlogListener implements ApplicationRunner {
                     if (databaseAndTableName != null && databaseList.contains(databaseAndTableName)) {
                         for (Serializable[] row : writeRowsEventData.getRows()) {
                             String msg = JSON.toJSONString(new BinlogModel(databaseAndTableName, MethodConstant.INSERT, row));
-                            kafkaSender.send(configuration.getTopic(), UUID.randomUUID().toString(),msg);
+                            kafkaSender.send(configuration.getTopic(), UUID.randomUUID().toString(), msg);
                         }
                     }
                 }

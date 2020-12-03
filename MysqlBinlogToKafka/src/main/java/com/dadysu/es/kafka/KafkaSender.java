@@ -14,7 +14,7 @@ public class KafkaSender {
     @Resource
     private KafkaTemplate<String, Object> kafkaTemplate;
 
-    public void send(String topic, String id, Object data){
+    public void send(String topic, String id, Object data) {
         log.info("消费消息,topic:{},id:{},data:{}", topic, id, data);
         kafkaTemplate.send(topic, id, data);
     }
