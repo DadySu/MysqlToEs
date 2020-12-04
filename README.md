@@ -16,5 +16,5 @@ Synchronize mysql data to ES by listening to Binlog
 - 7、在Kibana中验证是否写入成功
 
 **演示效果**
-- 1、![mysql中执行](pic\insert.png)
-- 2、![kibana中查询](pic\kibana1.png)
+- 1、![mysql中执行](file/pic/insert.png)
+- 2、![kibana中查询](file/pic/kibana1.png)
